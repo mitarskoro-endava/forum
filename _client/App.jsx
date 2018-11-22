@@ -5,12 +5,18 @@ import store from "./redux/store";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./css/App.css";
 
-import Example from "./components/Example";
+import Layout from "./components/Layout";
+import DevNav from "./components/DevNav";
 
 class App extends Component {
 	state = {};
 	render() {
-		return <Route path="/" component={Example} />;
+		return (
+			<React.Fragment>
+				<DevNav />
+				<Route path="/" component={Layout} />
+			</React.Fragment>
+		);
 	}
 }
 

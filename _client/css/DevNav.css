@@ -1,0 +1,49 @@
+.DevNavContainer {
+	position: relative;
+	max-width: 250px;
+	min-width: 250px;
+	height: 100%;
+	border-right: 2px solid #ccc9c2;
+	transition: 0.5s;
+	background: #212733;
+	color: #ccc9c2;
+	z-index: 100000;
+	transform: translateX(-235px);
+}
+.DevNavContainer:hover {
+	transform: translateX(0);
+}
+.DevNavContainer ~ .container {
+	transition: 0.5s;
+	flex-basis: calc(100% - 15px);
+	flex-shrink: 0;
+	transform: translateX(-235px);
+}
+.DevNavContainer:hover ~ .container {
+	flex-basis: calc(100% - 250px);
+	transform: translateX(0);
+}
+.DevNavContainer .Pages {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+	padding: 0 20px;
+}
+.DevNavContainer .Pages > a {
+	border: 2px solid #8aaa67;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 16px;
+	display: block;
+	margin-bottom: 5px;
+	color: #ccc9c2;
+	text-decoration: none;
+}
+.DevNavContainer .Pages > a.active {
+	background-color: #8aaa67;
+	color: #333;
+}
+
+#app {
+	display: flex;
+}

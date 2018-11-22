@@ -1,0 +1,25 @@
+.tab-navs {
+	display: flex;
+	min-width: 100%;
+}
+.tab-nav {
+	flex-shrink: 1;
+	display: flex;
+	flex-wrap: wrap;
+	border: solid 1px #212733;
+	z-index: 1;
+	text-decoration: none;
+	color: inherit;
+}
+.tab-nav:not(:last-child) {
+	margin-right: 0.5em;
+}
+.tab-nav[ms-tab-state="active"] {
+	border-bottom: solid 1px white;
+}
+.tabs {
+	border: solid 1px #212733;
+	display: flex;
+	min-width: 100%;
+	margin-top: -1px;
+}

@@ -1,0 +1,18 @@
+.lc {
+	display: flex;
+	flex-direction: column;
+}
+form .lc {
+	width: 100%;
+	margin-bottom: 0.8em;
+}
+
+.lc label {
+	margin-bottom: 3px;
+}
+.lc label[ms-required="true"]::after {
+	content: "*";
+	color: red;
+	font-size: 14px;
+	margin-left: 3px;
+}

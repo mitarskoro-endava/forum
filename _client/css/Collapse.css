@@ -1,0 +1,30 @@
+.collapse-toggle {
+	display: flex;
+	justify-content: space-between;
+	text-decoration: none;
+	color: inherit;
+}
+.collapse-toggle > div {
+	display: flex;
+}
+.collapse-toggle > div > * {
+	align-self: center;
+}
+.collapse-toggle > div > *:not(:last-child) {
+	margin-right: 0.5em;
+}
+/*- ToggleArrow -*/
+.collapse-toggle::after {
+	content: "*";
+	display: inline;
+	align-self: center;
+	margin-right: 0.5em;
+	transition: all 0.5s;
+}
+.collapse-toggle[ms-collapse-state="collapsed"]::after {
+	transform: rotate(180deg);
+}
+.collapse-box {
+	transition: all 300ms;
+	overflow: hidden;
+}

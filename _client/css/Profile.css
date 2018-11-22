@@ -1,0 +1,18 @@
+.profile-container {
+	display: flex;
+	min-width: 1000px;
+}
+.profile-container > div {
+	display: flex;
+	flex-direction: column;
+}
+.profile-container > div:first-child {
+	flex-basis: 20%;
+}
+.profile-container > div:last-child {
+	flex-basis: 80%;
+}
+
+.profile-container .controls {
+	text-align: right;
+}

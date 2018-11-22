@@ -1,0 +1,13 @@
+.signup-form {
+	margin: auto;
+	align-self: center;
+	width: 444px;
+	position: relative;
+	border: solid 2px #212713;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.signup-form > h1:first-child {
+	margin-block-start: 0;
+}
