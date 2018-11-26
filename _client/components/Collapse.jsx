@@ -28,7 +28,8 @@ class Collapse extends Component {
 		);
 	}
 	collapseState() {
-		return (this.stateful && this.state.collapsed) || this.props.collapsed
+		return (this.stateful && this.state.collapsed) ||
+			(!this.stateful && this.props.collapsed)
 			? "collapsed"
 			: undefined;
 	}

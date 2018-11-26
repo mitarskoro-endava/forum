@@ -18,4 +18,17 @@ app.use("/", router);
 //  Initialize a DB connection
 const db = require("./db/connection");
 
+//session
+const mongoose = require("mongoose");
+const session = require("express-session");
+const sessionStore = require("connect-mongo")(session);
+app.use(
+	session({
+		store: new sessionStore({ mongooseConnection: mongoose.connection }),
+		secret: "this is a secret string key",
+		resave: false,
+		saveUninitialized: true
+	})
+);
+
 module.exports = app;

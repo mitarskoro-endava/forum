@@ -1,0 +1,51 @@
+.board-track {
+	border: solid 1px #212733;
+	display: flex;
+	padding: 3px 10px;
+	width: 100%;
+}
+.board-track + .board-track {
+	border-top: none;
+}
+.board-track > * {
+	align-self: center;
+	flex-grow: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-right: 10px;
+}
+.board-track > :last-child {
+	margin-right: 0;
+}
+.board-track > .post-count,
+.board-track > .icon {
+	flex-basis: 5%;
+	text-align: center;
+}
+.board-track > .title {
+	flex-basis: 30%;
+}
+.board-track > .last-post,
+.board-track > .comment-by,
+.board-track > .started-by {
+	flex-basis: 20%;
+	text-align: center;
+	padding: 0.2em 0 0.8em;
+}
+.board-track > .last-post > label,
+.board-track > .comment-by > label,
+.board-track > .started-by > label {
+	display: block;
+	font-size: 0.8em;
+	line-height: 1;
+	width: 100%;
+}
+.board-track > .last-post > span,
+.board-track > .comment-by > span,
+.board-track > .started-by > span {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

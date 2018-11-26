@@ -1,0 +1,13 @@
+.board-message-container {
+	width: 1000px; /*@TODO*/
+	display: flex;
+}
+
+.board-message-container > .owner {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 20%;
+}
+.board-message-container > .body {
+	flex-basis: 80%;
+}

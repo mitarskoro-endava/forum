@@ -10,10 +10,8 @@ class CollapseGroup extends Component {
 				child.props.collapsed || !allCollapsed ? true : (allCollapsed = false)
 			)
 		};
-		console.log(allCollapsed);
 	}
 	render() {
-		console.log("state: ", this.state);
 		return (
 			<React.Fragment>{this.generateControlledCollapses()}</React.Fragment>
 		);

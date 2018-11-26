@@ -6,6 +6,9 @@ import UserPanel from "./UserPanel";
 import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
 import Boards from "../pages/Boards";
+import Board from "../pages/Board";
+import Post from "../pages/Post";
+import NewPost from "../pages/NewPost";
 
 class Pages extends Component {
 	state = {};
@@ -21,6 +24,9 @@ class Pages extends Component {
 							<Route path="/profile" exact component={Profile} />
 							<Route path="/profile/:id" exact component={Profile} />
 							<Route path="/boards" exact component={Boards} />
+							<Route path="/boards/:id" exact component={Board} />
+							<Route path="/boards/:id/new" exact component={NewPost} />
+							<Route path="/posts/:id" exact component={Post} />
 						</Switch>
 					</div>
 					<div className="footer" />
@@ -29,9 +35,6 @@ class Pages extends Component {
 				{false && (
 					<Switch>
 						<Route path="/" exact component={LandingPage} />
-						<Route path="/boards/:id" exact component={Board} />
-						<Route path="/boards/:id/new" exact component={Post} />
-						<Route path="/posts/:id" exact component={Post} />
 						<Route path="/admin" exact component={Admin} />
 						<Route path="/admin/boards" exact component={AdminBoards} />
 						<Route path="/admin/boards/new" exact component={BoardEdit} />
