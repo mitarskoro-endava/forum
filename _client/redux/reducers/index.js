@@ -1,8 +1,8 @@
-import exampleReducer from "./example";
+import profileReducer from "./profile";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
-    example: exampleReducer
+	profile: profileReducer
 });
 
 export default rootReducer;

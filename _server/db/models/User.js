@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = require("../../.lib/mongo-helpers").Schema;
-const model = require("../../.lib/mongo-helpers").model;
+//const model = require("../../.lib/mongo-helpers").model;
 
 const userSchema = new Schema({
 	email: { type: String, require: true },
@@ -21,9 +21,7 @@ const userSchema = new Schema({
 	updatedBy: { type: mongoose.SchemaTypes.ObjectId }
 });
 
-const userModel = model("User", userSchema);
-
 module.exports = {
 	schema: userSchema,
-	model: userModel
+	model: mongoose.model("User", userSchema)
 };

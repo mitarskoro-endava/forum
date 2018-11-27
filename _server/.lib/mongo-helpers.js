@@ -21,6 +21,6 @@ const mappedSchema = function(data) {
 	});
 };
 module.exports = {
-	Schema: mappedSchema,
-	model: mongoose.model.bind(mongoose)
+	Schema: mappedSchema
+	//model: mongoose.model.bind(mongoose)
 };

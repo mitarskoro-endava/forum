@@ -13,7 +13,6 @@ app.get("/favicon.png", (req, res) => {
 		.status(404)
 		.send();
 });
-app.use("/", router);
 
 //  Initialize a DB connection
 const db = require("./db/connection");
@@ -30,5 +29,7 @@ app.use(
 		saveUninitialized: true
 	})
 );
+
+app.use("/", router);
 
 module.exports = app;
